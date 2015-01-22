@@ -20,7 +20,7 @@ BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5KIO)
-BuildRequires:	cmake(SharedMimeInfo)
+BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	ninja
 Provides:	bluez-pin
 Requires:	bluez >= 4.28

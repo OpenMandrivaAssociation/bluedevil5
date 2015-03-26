@@ -2,7 +2,7 @@
 
 Summary:	The bluetooth stack for KDE 5
 Name:		bluedevil5
-Version:	5.2.1
+Version:	5.2.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPL
@@ -12,6 +12,9 @@ Source100:	%{name}.rpmlintrc
 
 BuildRequires:	extra-cmake-modules5
 BuildRequires:	pkgconfig(bluedevil) >= 5.0
+BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5WidgetsAddons)

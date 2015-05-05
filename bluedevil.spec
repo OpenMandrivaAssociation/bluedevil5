@@ -59,6 +59,7 @@ KCM, KDED, KIO, Library and some other small applications.
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/code/logic.js
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/*.qml
 %{_datadir}/remoteview/bluetooth-network.desktop
+%{_datadir}/mime/packages/bluedevil-mime.xml
 
 #-----------------------------------------------------------------------------
 
@@ -71,4 +72,5 @@ KCM, KDED, KIO, Library and some other small applications.
 
 %install
 %ninja_install -C build
-%find_lang bluedevil plasma_applet_org.kde.plasma.bluetooth
+%find_lang bluedevil 
+%find_lang plasma_applet_org.kde.plasma.bluetooth

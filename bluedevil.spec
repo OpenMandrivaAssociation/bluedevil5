@@ -39,7 +39,7 @@ Conflicts:	bluedevil < 5.0
 BlueDevil is the new bluetooth stack for KDE, it's composed of:
 KCM, KDED, KIO, Library and some other small applications.
 
-%files -f bluedevil.lang plasma_applet_org.kde.plasma.bluetooth.lang
+%files -f bluedevil.lang -f plasma_applet_org.kde.plasma.bluetooth.lang
 %{_bindir}/*
 %{_libdir}/libexec/bluedevil-*
 %{_libdir}/qt5/plugins/*.so

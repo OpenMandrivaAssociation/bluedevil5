@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Qml)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5DBusAddons)
@@ -38,7 +39,7 @@ Conflicts:	bluedevil < 5.0
 BlueDevil is the new bluetooth stack for KDE, it's composed of:
 KCM, KDED, KIO, Library and some other small applications.
 
-%files -f bluedevil.lang
+%files -f bluedevil.lang plasma_applet_org.kde.plasma.bluetooth.lang
 %{_bindir}/*
 %{_libdir}/libexec/bluedevil-*
 %{_libdir}/qt5/plugins/*.so
@@ -47,6 +48,17 @@ KCM, KDED, KIO, Library and some other small applications.
 %{_datadir}/knotifications5/*
 %{_datadir}/kservices5/*
 %{_datadir}/mime/packages/bluedevil-mime.xml
+
+%dir %{_libdir}/qt5/qml/org/kde/plasma/private/bluetooth
+%{_libdir}/qt5/plugins/kf5/kded/*.so
+%{_libdir}/qt5/qml/org/kde/plasma/private/bluetooth/libbluetoothplugin.so
+%{_libdir}/qt5/qml/org/kde/plasma/private/bluetooth/qmldir
+
+%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth
+%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/metadata.desktop
+%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/code/logic.js
+%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/*.qml
+%{_datadir}/remoteview/bluetooth-network.desktop
 
 #-----------------------------------------------------------------------------
 
@@ -59,4 +71,4 @@ KCM, KDED, KIO, Library and some other small applications.
 
 %install
 %ninja_install -C build
-%find_lang bluedevil
+%find_lang bluedevil plasma_applet_org.kde.plasma.bluetooth

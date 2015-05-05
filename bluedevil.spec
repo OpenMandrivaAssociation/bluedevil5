@@ -2,7 +2,7 @@
 
 Summary:	The bluetooth stack for KDE 5
 Name:		bluedevil5
-Version:	5.2.2
+Version:	5.3.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPL
@@ -10,7 +10,7 @@ Url:		https://projects.kde.org/projects/extragear/base/bluedevil
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/plasma/%{version}/bluedevil-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
 
-BuildRequires:	extra-cmake-modules5
+BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(bluedevil) >= 5.0
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Core)
@@ -24,7 +24,6 @@ BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	pkgconfig(shared-mime-info)
-BuildRequires:	ninja
 Provides:	bluez-pin
 Requires:	bluez >= 4.28
 Requires:	obexd
@@ -50,12 +49,11 @@ KCM, KDED, KIO, Library and some other small applications.
 
 %prep
 %setup -qn bluedevil-%{version}
+%cmake_kde5
 
 %build
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
-ninja
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%ninja_install -C build
 %find_lang bluedevil

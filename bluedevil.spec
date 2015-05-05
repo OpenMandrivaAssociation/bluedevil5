@@ -55,11 +55,13 @@ KCM, KDED, KIO, Library and some other small applications.
 %{_libdir}/qt5/qml/org/kde/plasma/private/bluetooth/qmldir
 
 %dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth
+%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents
+%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/code
+%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/metadata.desktop
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/code/logic.js
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/*.qml
 %{_datadir}/remoteview/bluetooth-network.desktop
-%{_datadir}/mime/packages/bluedevil-mime.xml
 
 #-----------------------------------------------------------------------------
 

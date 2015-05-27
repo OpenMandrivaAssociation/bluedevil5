@@ -7,7 +7,7 @@ Release:	1
 Group:		Graphical desktop/KDE
 License:	GPL
 Url:		https://projects.kde.org/projects/extragear/base/bluedevil
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/plasma/%{version}/bluedevil-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/plasma/%{version}/bluedevil-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
 
 BuildRequires:	cmake(ECM)

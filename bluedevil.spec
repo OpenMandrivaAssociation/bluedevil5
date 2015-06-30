@@ -74,6 +74,6 @@ KCM, KDED, KIO, Library and some other small applications.
 
 %install
 %ninja_install -C build
-%find_lang bluedevil 
+%find_lang bluedevil
 %find_lang plasma_applet_org.kde.plasma.bluetooth
 cat *.lang >%{name}-all.lang

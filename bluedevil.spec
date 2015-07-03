@@ -30,7 +30,6 @@ BuildRequires:	pkgconfig(shared-mime-info)
 Provides:	bluez-pin
 Requires:	bluez >= 4.28
 Requires:	obexd
-Requires:	obex-data-server
 
 # Can't coexist with the KDE4 version because of hardcoded filenames
 Conflicts:	bluedevil < 5.0

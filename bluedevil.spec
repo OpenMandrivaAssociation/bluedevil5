@@ -11,7 +11,6 @@ Source0:	http://download.kde.org/%{stable}/plasma/%{version}/bluedevil-%{version
 Source100:	%{name}.rpmlintrc
 Patch0:		bluedevil-5.3.1-bluezqt511.patch
 BuildRequires:	cmake(ECM)
-BuildRequires:	pkgconfig(bluedevil) >= 5.0
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5DBus)

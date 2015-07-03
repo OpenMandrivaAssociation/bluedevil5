@@ -9,7 +9,7 @@ License:	GPL
 Url:		https://projects.kde.org/projects/extragear/base/bluedevil
 Source0:	http://download.kde.org/%{stable}/plasma/%{version}/bluedevil-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
-
+Patch0:		bluedevil-5.3.1-bluezqt511.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(bluedevil) >= 5.0
 BuildRequires:	pkgconfig(Qt5Widgets)
@@ -31,6 +31,7 @@ BuildRequires:	pkgconfig(shared-mime-info)
 Provides:	bluez-pin
 Requires:	bluez >= 4.28
 Requires:	obexd
+Requires:	obex-data-server
 
 # Can't coexist with the KDE4 version because of hardcoded filenames
 Conflicts:	bluedevil < 5.0
@@ -67,6 +68,7 @@ KCM, KDED, KIO, Library and some other small applications.
 
 %prep
 %setup -qn bluedevil-%{version}
+%apply_patches
 %cmake_kde5
 
 %build

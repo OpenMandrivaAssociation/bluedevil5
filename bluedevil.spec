@@ -9,7 +9,6 @@ License:	GPL
 Url:		https://projects.kde.org/projects/extragear/base/bluedevil
 Source0:	http://download.kde.org/%{stable}/plasma/%{version}/bluedevil-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
-Patch0:		bluedevil-5.3.1-bluezqt511.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Core)
@@ -66,7 +65,6 @@ KCM, KDED, KIO, Library and some other small applications.
 
 %prep
 %setup -qn bluedevil-%{version}
-%apply_patches
 %cmake_kde5
 
 %build

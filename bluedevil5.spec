@@ -45,6 +45,7 @@ KCM, KDED, KIO, Library and some other small applications.
 %{_datadir}/knotifications5/*
 %{_datadir}/kservices5/*
 %{_datadir}/mime/packages/bluedevil-mime.xml
+%{_datadir}/metainfo/org.kde.plasma.bluetooth.appdata.xml
 
 %dir %{_libdir}/qt5/qml/org/kde/plasma/private/bluetooth
 %{_libdir}/qt5/plugins/kf5/kded/*.so

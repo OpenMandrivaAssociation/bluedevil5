@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   bluedevil-5.10.5.tar.xz: c8d7fed511a933a491cdb19c82c7c1ee181c7353
+sources:
+  bluedevil-5.12.6.tar.xz: b68193d369b7c8678e9910eea886b1d520407595
